@@ -11,7 +11,7 @@ body{
 .card {
     width: 160px;
     height: 200px;
-    background-color: #ccc;
+    background-color: grey;
     border: 1px solid #999;
     margin: 5px;
     display: flex;
@@ -43,11 +43,11 @@ body{
 }
 
 .card-front {
-    background-color: #ccc;
+    background-color: #6F4E37;
 }
 
 .card-back {
-    background-color: #999;
+    background-color: grey;
     transform: rotateY(180deg);
     display: flex;
     align-items: center;
