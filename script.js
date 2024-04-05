@@ -2,21 +2,21 @@ document.addEventListener("DOMContentLoaded", function() {
     let nombreJugador1 = prompt("Ingrese el nombre del Jugador 1:");
     let nombreJugador2 = prompt("Ingrese el nombre del Jugador 2:");
 
-    const cartas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']; // Valores de ejemplo de las cartas
-    const pares = cartas.concat(cartas); // Duplicar las cartas para crear pares
-    let cartasBarajadas = barajarArray(pares); // Barajar las cartas
+    const cartas = ['♥', '♦', '♣', '♠', '★', '☁', '♪', '❦'];
+    const pares = cartas.concat(cartas); 
+    let cartasBarajadas = barajarArray(pares); 
     let cartasVolteadas = [];
     let cartasCoincidentes = [];
     let jugadorActual = 1;
     let puntajeJugador1 = 0;
     let puntajeJugador2 = 0;
-    let tiempo = 0; // Contador de tiempo
-    let intervaloTemporizador; // Variable para almacenar el intervalo del temporizador
+    let tiempo = 0; 
+    let intervaloTemporizador; 
 
     const tableroJuego = document.getElementById('tableroJuego');
     const puntajeJugador1Mostrado = document.getElementById('puntajeJugador1');
     const puntajeJugador2Mostrado = document.getElementById('puntajeJugador2');
-    const contadorElemento = document.getElementById('contador'); // Elemento del contador de tiempo
+    const contadorElemento = document.getElementById('contador'); 
     const cartaAlerta = document.getElementById('cartaAlerta');
 
     puntajeJugador1Mostrado.textContent = `${nombreJugador1}: ${puntajeJugador1}`;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
             cartasCoincidentes.push(carta1, carta2);
             actualizarPuntajes();
             if (cartasCoincidentes.length === pares.length) {
-                clearInterval(intervaloTemporizador); // Detener el contador de tiempo cuando se completa el juego
+                clearInterval(intervaloTemporizador); 
                 mostrarAlerta(`El ganador del juego es ${puntajeJugador1 > puntajeJugador2 ? nombreJugador1 : nombreJugador2} en ${tiempo} segundos`);
             }
         } else {
